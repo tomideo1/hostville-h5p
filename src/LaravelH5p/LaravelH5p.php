@@ -12,7 +12,7 @@
 
 namespace Djoudi\LaravelH5p;
 
-use App\EdcH5pClasses\LmsGamificationClass;
+use Djoudi\LaravelH5p\TomideH5pClasses\LmsGamificationClass;
 use Djoudi\LaravelH5p\Repositories\EditorAjaxRepository;
 use Djoudi\LaravelH5p\Repositories\LaravelH5pRepository;
 use Djoudi\LaravelH5p\Storages\EditorStorage;
@@ -34,7 +34,7 @@ use H5PValidator;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use App\EdcH5pClasses\AuthClass;
+use Djoudi\LaravelH5p\TomideH5pClasses\AuthClass;
 
 //H5P_Plugin
 class LaravelH5p

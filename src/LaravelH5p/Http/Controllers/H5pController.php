@@ -2,8 +2,8 @@
 
 namespace Djoudi\LaravelH5p\Http\Controllers;
 
-use App\EdcH5pClasses\AuthClass;
-use App\EdcH5pClasses\LmsGamificationClass;
+use  Djoudi\LaravelH5p\TomideH5pClasses\AuthClass;
+use Djoudi\LaravelH5p\TomideH5pClasses\LmsGamificationClass;
 use App\Http\Controllers\Controller;
 use App\User;
 use Djoudi\LaravelH5p\Eloquents\H5pContent;
@@ -14,7 +14,7 @@ use H5pCore;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
-use App\EdcH5pClasses\ContentClass;
+use Djoudi\LaravelH5p\TomideH5pClasses\ContentClass;
 use Illuminate\Support\Facades\DB;
 
 class H5pController extends Controller
