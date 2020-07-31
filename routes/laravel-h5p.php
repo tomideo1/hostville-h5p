@@ -39,12 +39,15 @@ Route::group(['middleware' => ['web']], function () {
 
 
 Route::prefix('api')->group(function () {
+  Route::get('h5p/{id}','Djoudi\LaravelH5p\Http\Controllers\H5pController@show');
     Route::group(['middleware' => ['web','auth']], function () {
 
         Route::get('h5p/dom/{id?}', '\Djoudi\LaravelH5p\Http\Controllers\AjaxController@dom')->name('h5p.dom');
 
-        Route::resource('h5p', "Djoudi\LaravelH5p\Http\Controllers\H5pController");
-//        Route::get('h5p/{id}','Djoudi\LaravelH5p\Http\Controllers\H5pController@show');
+        Route::resource('h5p', "Djoudi\LaravelH5p\Http\Controllers\H5pController",[
+          'only' => ['index', 'create', 'store',"edit","update","destroy"]
+        ]);
+
         Route::match(['GET', 'POST'], 'ajax/libraries', 'Djoudi\LaravelH5p\Http\Controllers\AjaxController@libraries')->name('h5p.ajax.libraries');
         Route::get('ajax', 'Djoudi\LaravelH5p\Http\Controllers\AjaxController')->name('h5p.ajax');
         Route::get('ajax/libraries', 'Djoudi\LaravelH5p\Http\Controllers\AjaxController@libraries')->name('h5p.ajax.libraries');

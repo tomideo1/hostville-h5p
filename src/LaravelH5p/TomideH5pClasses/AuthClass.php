@@ -11,15 +11,14 @@ use Illuminate\Http\Request;
 
 class AuthClass
 {
-
-    public function getAuthUser(){
+      public function getAuthUser(){
         $current_url = URL::current();
-        $content_id = $current_url[strlen($current_url) - 1];
-        $newQuery = DB::table('h5p_contents')->where('id',$content_id)->first();
+        $url = explode("/",$current_url);
+        $newQuery = DB::table('h5p_contents')->where('id',$url[5])->first();
         if( is_null($newQuery)){
-           return redirect()->route('login');
+          return redirect()->route('login');
         }
         return  User::where('id',$newQuery->user_id)->first();
-    }
+      }
 
 }

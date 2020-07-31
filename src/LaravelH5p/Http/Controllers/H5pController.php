@@ -384,7 +384,6 @@ class H5pController extends Controller
 
         if ($validator->isValidPackage($skipContent, $only_upgrade) && ($skipContent || $content['title'] !== null)) {
             if (function_exists('check_upload_size')) {
-                dd('all validations work');
                 // Check file sizes before continuing!
                 $tmpDir = $interface->getUploadedH5pFolderPath();
                 $error = self::check_upload_sizes($tmpDir);
