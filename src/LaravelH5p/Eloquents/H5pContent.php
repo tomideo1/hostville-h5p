@@ -2,7 +2,7 @@
 
 namespace Djoudi\LaravelH5p\Eloquents;
 
-use App\User;
+use App\Models\User;
 use DB;
 use Illuminate\Database\Eloquent\Model;
 

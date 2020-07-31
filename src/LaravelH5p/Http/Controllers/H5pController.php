@@ -5,7 +5,7 @@ namespace Djoudi\LaravelH5p\Http\Controllers;
 use  Djoudi\LaravelH5p\TomideH5pClasses\AuthClass;
 use Djoudi\LaravelH5p\TomideH5pClasses\LmsGamificationClass;
 use App\Http\Controllers\Controller;
-use App\User;
+use App\Models\User;
 use Djoudi\LaravelH5p\Eloquents\H5pContent;
 use Djoudi\LaravelH5p\Events\H5pEvent;
 use Djoudi\LaravelH5p\LaravelH5p;

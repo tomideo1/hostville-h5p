@@ -3,7 +3,7 @@
 
 namespace Djoudi\LaravelH5p\TomideH5pClasses;
 
-use App\User;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Auth;
