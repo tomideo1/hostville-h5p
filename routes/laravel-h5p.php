@@ -45,7 +45,7 @@ Route::prefix('api')->group(function () {
         Route::get('h5p/dom/{id?}', '\Djoudi\LaravelH5p\Http\Controllers\AjaxController@dom')->name('h5p.dom');
 
         Route::resource('h5p', "Djoudi\LaravelH5p\Http\Controllers\H5pController",[
-          'only' => ['index', 'create', 'store',"edit","update","destroy"]
+          'only' => ['index', 'store',"edit","update","destroy"]
         ]);
 
         Route::match(['GET', 'POST'], 'ajax/libraries', 'Djoudi\LaravelH5p\Http\Controllers\AjaxController@libraries')->name('h5p.ajax.libraries');
