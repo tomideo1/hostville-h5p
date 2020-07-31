@@ -10,7 +10,7 @@ Fork from Djoudi
 Require it in the Composer.
 
 ```bash
-composer require exatech-group/laravel-h5p
+composer require tomide/laravel-h5p
 ```
 
 Publish the Views, Config and so things.
