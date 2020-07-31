@@ -1,6 +1,6 @@
 
 
-# H5P Plugin in Laravel Framework 
+# H5P  Game Plugin in Laravel Framework 
 
 ## Description
 Fork from Djoudi
@@ -25,14 +25,16 @@ Migrate the Database
 php artisan migrate
 ```
 
-Sur linux
+Run the following commands to sync the storage paths
+
+For  linux and Osx 
 ```bash
 cd public/vendor/h5p
 ln -s ../../../storage/h5p/content
 ln -s ../../../storage/h5p/editor
 ln -s ../../../storage/h5p/libraries
 ```
-Ou sur windows
+For  windows
 ```cmd admin window
 cd public/vendor/h5p
 mklink /d content ..\..\..\storage\h5p\content
